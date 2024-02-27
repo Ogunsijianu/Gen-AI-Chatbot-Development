@@ -40,7 +40,7 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=20)
 
 text_chunks = text_splitter.split_documents(docs)
 
-print(text_chunks)
+
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2") 
 
 # create embeddings for each text chunk using the FAISS class, which creates a vector index using FAISS and allows efficient searches between vectors
