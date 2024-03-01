@@ -16,22 +16,22 @@ st.set_page_config(page_title="Chatbot", page_icon=":books:")
 st.title("GreeneDesk Chatbot Application")
 # Load PDF documents for training
 loaders = [
-    PyPDFLoader("docs/CGC-Aquatics-Programs-Parent-Handbook.pdf"),
-    PyPDFLoader("docs/client-handbook-recreation.pdf"),
-    PyPDFLoader("docs/curriculum_swimming_and_water_safety-a_guide_for_parents.pdf"),
-    PyPDFLoader("docs/dipadees_learntoswim_infobk.pdf"),
-    PyPDFLoader("docs/LTS flyer Term 3 2015.pdf"),
-    PyPDFLoader("docs/National-Swimming-and-Water-Safety-Framework_FINAL-2020.pdf"),
-    PyPDFLoader("docs/Parent Handbook.pdf"),
-    PyPDFLoader("docs/Scientific Advisory Council SCIENTIFIC REVIEW - Minimum Age for Swimming Lessons.pdf"),
-    PyPDFLoader("docs/ssa_info_book.pdf"),
-    PyPDFLoader("docs/Swim+School+-+Parents+Handbook-lowres-web.pdf"),
-    PyPDFLoader("docs/Swimming Lessons Level Progression Chart _ The Y.pdf"),
-    PyPDFLoader("docs/Swim-Lessons-Parent-Handbook_r4.pdf"),
-    PyPDFLoader("docs/WIRAC LTS Timetable.pdf"),
-    PyPDFLoader("docs/Y NSW Swim School Program - Terms and Conditions _ The Y.pdf"),
-    PyPDFLoader("docs/YMCA Swim Lesson Level Guide.pdf"),
-    PyPDFLoader("docs/YMCA-Swim-School-Brochure.pdf")
+    PyPDFLoader("/docs/CGC-Aquatics-Programs-Parent-Handbook.pdf"),
+    PyPDFLoader("/docs/client-handbook-recreation.pdf"),
+    PyPDFLoader("/docs/curriculum_swimming_and_water_safety-a_guide_for_parents.pdf"),
+    PyPDFLoader("/docs/dipadees_learntoswim_infobk.pdf"),
+    PyPDFLoader("/docs/LTS flyer Term 3 2015.pdf"),
+    PyPDFLoader("/docs/National-Swimming-and-Water-Safety-Framework_FINAL-2020.pdf"),
+    PyPDFLoader("/docs/Parent Handbook.pdf"),
+    PyPDFLoader("/docs/Scientific Advisory Council SCIENTIFIC REVIEW - Minimum Age for Swimming Lessons.pdf"),
+    PyPDFLoader("/docs/ssa_info_book.pdf"),
+    PyPDFLoader("/docs/Swim+School+-+Parents+Handbook-lowres-web.pdf"),
+    PyPDFLoader("/docs/Swimming Lessons Level Progression Chart _ The Y.pdf"),
+    PyPDFLoader("/docs/Swim-Lessons-Parent-Handbook_r4.pdf"),
+    PyPDFLoader("/docs/WIRAC LTS Timetable.pdf"),
+    PyPDFLoader("/docs/Y NSW Swim School Program - Terms and Conditions _ The Y.pdf"),
+    PyPDFLoader("/docs/YMCA Swim Lesson Level Guide.pdf"),
+    PyPDFLoader("/docs/YMCA-Swim-School-Brochure.pdf")
 ]
 
 docs = []
