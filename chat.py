@@ -1,11 +1,11 @@
 # Imports
 import streamlit as st
 from langchain.chains import RetrievalQA
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.llms import LlamaCpp
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.llms import LlamaCpp
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import FAISS
-from langchain_community.document_loaders import PyPDFLoader
+from langchain.vectorstores import FAISS
+from langchain.document_loaders import PyPDFLoader
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
