@@ -7,4 +7,4 @@ tiktoken==0.4.0
 huggingface-hub==0.14.1
 transformers
 openai==0.27.6
-PyPDF2
+pypdf
