@@ -15,11 +15,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from dotenv import load_dotenv
 
 
-openai_api_key = os.environ.get('OPENAI_API_KEY')
-headers = {
-    "authorization": st.secrets['OPENAI_API_KEY'],
-    "content-type": "application/jsom"
-}
+
 
 st.set_page_config(page_title="Chatbot", page_icon=":books:")
 st.title("GreeneDesk Chatbot Application")
