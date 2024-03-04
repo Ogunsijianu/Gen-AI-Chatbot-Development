@@ -14,6 +14,7 @@ from htmlTemplates import css, bot_template, user_template
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from dotenv import load_dotenv
 
+
 openai_api_key = os.environ.get('OPENAI_API_KEY')
 headers = {
     "authorization": st.secrets['OPENAI_API_KEY'],
