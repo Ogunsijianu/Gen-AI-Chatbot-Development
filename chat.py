@@ -3,6 +3,7 @@ import streamlit as st
 import os
 from langchain.chains import RetrievalQA
 from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain.llms import HuggingFaceHub
 from langchain_community.llms import LlamaCpp
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
@@ -15,7 +16,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from dotenv import load_dotenv
 
 
-os.environ.get('OPENAI_API_KEY')
+os.environ.get('HUGGINGFACE_API_KEY')
 
 
 st.set_page_config(page_title="Chatbot", page_icon=":books:")
@@ -59,7 +60,7 @@ vector_store = FAISS.from_documents(text_chunks, embedding=embeddings)
 def get_conversation_chain(vector_store):
     # Import the neural language model using the LlamaCpp class, which allows you to use a GPT-3 model in C++ with various parameters such as temperature, top_p, verbose and n_ctx (maximum number of tokens that can be generated)
 
-    llm = ChatOpenAI()
+    llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
     memory = ConversationBufferMemory(memory_key='chat_history', return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(llm=llm, retriever=vector_store.as_retriever(), memory=memory)
