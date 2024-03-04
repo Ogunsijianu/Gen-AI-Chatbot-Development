@@ -13,8 +13,12 @@ from htmlTemplates import css, bot_template, user_template
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from dotenv import load_dotenv
 
+headers = {
+    "authorization": st.secrets['OPENAI_API_KEY'],
+    "content-type": "application/jsom"
+}
+
 st.set_page_config(page_title="Chatbot", page_icon=":books:")
-st.title("GreeneDesk Chatbot Application")
 # Load PDF documents for training
 loaders = [
     PyPDFLoader("CGC-Aquatics-Programs-Parent-Handbook.pdf"),
