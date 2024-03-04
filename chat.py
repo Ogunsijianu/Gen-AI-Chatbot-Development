@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 
 os.environ.get('OPENAI_API_KEY')
 
+
 st.set_page_config(page_title="Chatbot", page_icon=":books:")
 st.title("GreeneDesk Chatbot Application")
 # Load PDF documents for training
