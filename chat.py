@@ -1,5 +1,6 @@
 # Imports
 import streamlit as st
+import os
 from langchain.chains import RetrievalQA
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms import LlamaCpp
@@ -13,12 +14,14 @@ from htmlTemplates import css, bot_template, user_template
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from dotenv import load_dotenv
 
+openai_api_key = os.environ.get('OPENAI_API_KEY')
 headers = {
     "authorization": st.secrets['OPENAI_API_KEY'],
     "content-type": "application/jsom"
 }
 
 st.set_page_config(page_title="Chatbot", page_icon=":books:")
+st.title("GreeneDesk Chatbot Application")
 # Load PDF documents for training
 loaders = [
     PyPDFLoader("CGC-Aquatics-Programs-Parent-Handbook.pdf"),
@@ -85,7 +88,6 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Greendesk Chatbot Application")
     
     
     with st.spinner('Processing'):
